@@ -2,7 +2,7 @@
 
 > Projeto para estudo de JavaScript.
 
-![Concluído](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
+### 🏁 Status do Projeto: **Concluído** ✅
 
 ## 💻 Sobre o projeto
 Foco em captar informações do usuário e exibilas em formato de listagem, exibindo ao usuário os totais de contagem e soma
