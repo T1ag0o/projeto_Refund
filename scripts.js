@@ -93,6 +93,10 @@ function expenseAdd(newExpense) {
     // adiciona o item na lista
     expenseList.append(expenseItem);
 
+
+    // limpa o formulário com a função
+    formClear();
+
     updateTotals();
 
   } catch (error) {
@@ -149,3 +153,29 @@ function updateTotals() {
     alert("Não foi possível atualizar os totais");
   }
 };
+
+// evento que captura o clique nos itens da lista
+expenseList.addEventListener("click", function (event) {
+  // verifica se é o icone de excluir que é clicado
+  if (event.target.classList.contains("remove-icon")) {
+    // obtém a li pai do elemento clicado
+    const item = event.target.closest(".expense");
+
+    // remove item da lista
+    if (item) {
+      item.remove();
+
+      updateTotals();
+    };
+  };
+
+});
+
+// limpa o formulário
+function formClear() {
+  expense.value = "";
+  category.value = "";
+  amount.value = "";
+
+  expense.focus();
+}
